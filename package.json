@@ -1,0 +1,31 @@
+{
+  "name": "cargo-llvm-cov-issues-207",
+  "version": "0.0.0",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "napi": {
+    "name": "cargo-llvm-cov-issues-207",
+    "triples": {
+      "defaults": false,
+      "additional": [
+        "x86_64-unknown-linux-gnu"
+      ]
+    }
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/archfz/cargo-llvm-cov-issues-207",
+  "devDependencies": {
+    "@napi-rs/cli": "^2.10.1",
+    "ava": "^4.3.0"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "scripts": {
+    "build": "napi build --platform",
+    "test:js": "ava",
+    "coverage:external": "./coverage.sh",
+    "coverage:internal": "cargo llvm-cov --html"
+  },
+  "packageManager": "yarn@3.2.1"
+}
